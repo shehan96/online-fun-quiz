@@ -1,6 +1,6 @@
 export const apiClient = {
-  get: () => {
-    // ettetet
+  get: async () => {
+    const responce = await fetch('');
   },
   post: () => {
     // ettetet
