@@ -15,6 +15,6 @@ export const apiClient = {
     return result;
   },
   getLevelTest: async () => {
-    
+    const responce = await fetch('https://the-trivia-api.com/api/categories');
   }
 };
