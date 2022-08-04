@@ -1,23 +1,20 @@
-import { useEffect } from "react";
+import { Button } from '@mui/material';
+import { useEffect } from 'react';
+import { QuestionContainer } from '../../components/QuestionContainer';
+import { apiClient } from '../../services/api-client';
 
 const Home = () => {
+  useEffect(() => {
+    apiClient.getQuetstions().then((result) => {
+      console.log(result);
+    });
+  }, []);
 
-    const fetchData = async () => {
-        const responce = await fetch('https://the-trivia-api.com/api/questions?categories=sport_and_leisure&limit=10');
-        const result = await responce.json();
-        return result;
-    }
+  return (
+    <>
+      <QuestionContainer />
+    </>
+  );
+};
 
-    useEffect(() => {
-        fetchData().then(r => {
-            console.log(r);
-        })
-    }, []);
-    
-    return(
-        <>
-        </>
-    );
-}
-
-export { Home }
+export { Home };
