@@ -1,10 +1,10 @@
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 
 const QuestionContainer = () => {
     return (
       <>
         <Container maxWidth='md'>
-            
+            <Box></Box>
         </Container>
       </>
     );
