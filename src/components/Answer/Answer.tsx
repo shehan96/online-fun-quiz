@@ -1,5 +1,11 @@
+import { Box } from '@mui/material';
+
 const Answer = () => {
-    return(<></>);
-}
+  return (
+    <>
+      <Box></Box>
+    </>
+  );
+};
 
 export { Answer };
